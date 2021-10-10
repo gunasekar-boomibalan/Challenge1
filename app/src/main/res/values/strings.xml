@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Challenge1</string>
+    <string name="imagefromapi">imageFromApi</string>
+    <string name="time">time</string>
+    <string name="comments">comments</string>
+    <string name="detail_page_image">detail_page_image</string>
+    <string name="homepage">Home Page</string>
+    <string name="detail_page">Detail Page</string>
+</resources>

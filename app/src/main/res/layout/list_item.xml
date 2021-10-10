@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/imagefromapi"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_weight="3"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="gunasekar"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+    <ImageView
+        android:id="@+id/time_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        app:layout_constraintStart_toStartOf="@+id/desc"
+        android:src="@drawable/ic_time"
+        android:contentDescription="@string/time"/>
+    <TextView
+        android:id="@+id/timeStamp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toTopOf="@+id/time_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/time_icon"
+        app:layout_constraintStart_toEndOf="@+id/time_icon"
+        />
+    <ImageView
+        android:id="@+id/comments_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/time_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/time_icon"
+        app:layout_constraintStart_toEndOf="@+id/timeStamp"
+        android:src="@drawable/ic_comments"
+        android:contentDescription="@string/comments"/>
+    <TextView
+        android:id="@+id/commentsCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toTopOf="@+id/time_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/time_icon"
+        app:layout_constraintStart_toEndOf="@+id/comments_icon"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
